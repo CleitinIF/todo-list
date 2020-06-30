@@ -10,7 +10,7 @@ export interface Todo {
 
 export interface AddTodoAction {
   type: typeof ADD_TODO
-  payload: Todo
+  payload: string
 }
 
 export interface EndTodoAction {

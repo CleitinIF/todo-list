@@ -1,4 +1,5 @@
 import produce from 'immer'
+import { v4 as uuidv4 } from 'uuid'
 import { Todo, TodoActionTypes, ADD_TODO, END_TODO, REMOVE_TODO } from './types'
 
 const INITIAL_STATE: Todo[] = []
@@ -7,7 +8,11 @@ const myReducer = (state = INITIAL_STATE, action: TodoActionTypes) => {
   return produce(state, draft => {
     switch (action.type) {
       case ADD_TODO: {
-        draft.push(action.payload)
+        draft.push({
+          id: uuidv4(),
+          content: action.payload,
+          status: 'opened'
+        })
         break
       }
       case END_TODO: {

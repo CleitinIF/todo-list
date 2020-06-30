@@ -1,9 +1,9 @@
-import { ADD_TODO, Todo, TodoActionTypes, END_TODO, REMOVE_TODO } from '../reduces/types'
+import { ADD_TODO, TodoActionTypes, END_TODO, REMOVE_TODO } from '../reduces/types'
 
-export function addTodo (todo: Todo): TodoActionTypes {
+export function addTodo (content: string): TodoActionTypes {
   return {
     type: ADD_TODO,
-    payload: todo
+    payload: content
   }
 }
 
