@@ -5,7 +5,9 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard'
+    'standard',
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,5 +22,7 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+    'no-case-declarations': 'off',
+    "@typescript-eslint/no-unused-vars": ["error"]
   }
 }
