@@ -23,6 +23,7 @@ module.exports = {
   ],
   rules: {
     'no-case-declarations': 'off',
-    "@typescript-eslint/no-unused-vars": ["error"]
+    "@typescript-eslint/no-unused-vars": ["error"],
+    'react/display-name': 'off'
   }
 }
